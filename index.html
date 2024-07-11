@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+<link rel="stylesheet" href="style.css"></head>
+<body style="background-color: gray;">
+    <div class="container">
+        <div class="todo-list">
+            <h1>My to-do list</h1>
+            <p>Double-click an item to mark it complete.</p>
+            <div class="form-group">
+                <input type="text" id="new-task" placeholder="Enter a new task">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ol id="tasks">
+                <li ondblclick="toggleComplete(this)">My</li>
+                <li class="completed" ondblclick="toggleComplete(this)">to do</li>
+                <li ondblclick="toggleComplete(this)">list</li>
+            </ol>
+            <div class="buttons">
+                <button onclick="clearCompleted()">Clear Completed</button>
+                <button onclick="emptyList()">Empty List</button>
+                <button onclick="saveList()">Save List</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
